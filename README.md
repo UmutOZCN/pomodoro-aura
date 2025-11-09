@@ -1,93 +1,64 @@
-#  PomodoroAura
+# PomodoroAura
 > Focus, with breathing space.
 
 ![PomodoroAura Screenshot](https://i.imgur.com/example.png)
-*(Projenin bir ekran görüntüsünü buraya ekleyin. Yukarıdaki link sadece bir yer tutucudur. Ekran görüntünüzü [imgur.com](https://imgur.com/) gibi bir siteye yükleyip linki buraya yapıştırabilirsiniz.)*
-
-**PomodoroAura**, dikkatinizi dağıtmayan, sakin ve estetik bir arayüzle tasarlanmış minimalist bir Pomodoro® zamanlayıcı web uygulamasıdır. "Spa benzeri üretkenlik" felsefesiyle, kullanıcıların çalışma ve mola sürelerini, odağı bozmadan etkin bir şekilde yönetmelerine yardımcı olmak için geliştirilmiştir.
-
-Uygulama, React, Vite ve TypeScript kullanılarak oluşturulmuş ve tüm kullanıcı ayarlarını, tema tercihlerini ve hatta zamanlayıcının mevcut durumunu tarayıcının `localStorage`'ında saklayarak kalıcı bir deneyim sunar.
+*(Remember to replace this with a real screenshot URL from your live app. You can upload one to [imgur.com](https://imgur.com/).)*
 
 ---
 
-## ✨ Features (Özellikler)
+## 🚀 Live Application
 
-Proje, detaylı bir istem listesindeki tüm gereksinimleri karşılamak üzere geliştirilmiştir:
+This application is fully deployed and available for you to use right now.
 
-* **Tam Pomodoro Döngüsü:** Yapılandırılabilir Odaklanma (Focus), Kısa Mola (Short Break) ve Uzun Mola (Long Break) süreleri.
-* **Kalıcı Durum (Persistent State):** Tarayıcınızı kapatsanız veya yenileseniz bile, zamanlayıcınızın kaldığı yeri (`kalan saniye`, `aktif mod`, `çalışma durumu`) hatırlar.
-* **"Spa Benzeri" Arayüz:** Düşük kontrastlı, yumuşak renk paleti ve yumuşak animasyonlar.
-* **Gelişmiş Tema Desteği:** Tek tıkla Açık (Light), Koyu (Dark) ve **Sistem (System)** teması arasında geçiş yapabilme.
-* **Dairesel İlerleme Çubuğu:** Zaman aktıkça görsel olarak boşalan animasyonlu bir SVG halkası.
-* **Kesintisiz Modallar:** Ayarlar ve İstatistikler, zamanlayıcıyı **sıfırlamadan veya durdurmadan** açılır pencerelerde (modal) görüntülenir.
-* **Ses ve Masaüstü Bildirimleri:** Her seansın sonunda (eğer izin verilirse) yumuşak bir zil sesi ve masaüstü bildirimi.
-* **Duyarlı (Responsive) Tasarım:** Masaüstü, tablet ve 360px genişliğe kadar tüm mobil cihazlarda tam uyumlu çalışır.
-* **İstatistik Takibi:** Tamamlanan seansları ve toplam odaklanma süresini "Bugün" ve "Toplam" olarak `localStorage`'da saklar ve gösterir.
-* **Hızlı Ayarlar (Presets):** 25/5, 50/10 gibi yaygın zamanlamalar için tek tıkla ayar yapma.
+**Visit the live site:**
+### [https://pomodoro-aura.vercel.app](https://pomodoro-aura.vercel.app)
+*(Replace this with your actual Vercel link)*
 
 ---
 
-## 🛠️ Tech Stack (Kullanılan Teknolojiler)
+## ✨ About The Project
+
+**PomodoroAura** is a minimalist Pomodoro® timer web application designed with a calm, non-distracting, and aesthetic interface. Built on the philosophy of "spa-like productivity," it helps users effectively manage their work and break periods without disrupting their flow.
+
+The application is a robust Single Page Application (SPA) built with React, Vite, and TypeScript. It intelligently persists the complete user experience—including all custom settings, theme preferences, and even the timer's current state—in the browser's `localStorage`.
+
+---
+
+## 📋 Features
+
+* **Full Pomodoro Cycle:** Configurable durations for Focus, Short Break, and Long Break.
+* **Persistent State:** The timer remembers its state (remaining seconds, current mode, active status) even after the browser is refreshed or closed.
+* **"Spa-like" UI:** A minimal, low-contrast, and soft color palette with gentle micro-animations.
+* **Advanced Theme Support:** A one-click toggle between **Light**, **Dark**, and **System** (auto-detect) themes, with all preferences saved.
+* **Animated Progress Ring:** A circular SVG ring that visually depletes as time passes.
+* **Non-Interruptive Modals:** Both the **Settings** and **Statistics** panels open as modals, allowing the timer to continue running in the background without being reset.
+* **Audio & Desktop Notifications:** A soft chime and a desktop notification (if permission is granted) signal the end of each session.
+* **Fully Responsive Design:** A flawless experience on all devices, from large desktops down to 360px mobile screens.
+* **Persistent Statistics:** Tracks and saves completed focus sessions and total focus time, broken down by "Today" and "Total."
+* **Quick-Set Presets:** One-click presets for common timings (e.g., 25/5, 50/10).
+
+---
+
+## 🛠️ Tech Stack
 
 * **Framework:** React 18
 * **Build Tool:** Vite
-* **Dil:** TypeScript
-* **Durum Yönetimi (State):** React Hooks (`useState`, `useEffect`, `useRef`)
-* **Kalıcılık (Persistence):** `localStorage` üzerine kurulu özel bir `useLocalStorage` kancası (custom hook).
-* **Stil:** Modern CSS (CSS Değişkenleri, Grid, Flexbox, Media Queries)
-* **İkonlar:** Lucide React
+* **Language:** TypeScript
+* **State Management:** React Hooks (`useState`, `useEffect`, `useRef`)
+* **Persistence:** A custom `useLocalStorage` hook to save and retrieve state.
+* **Styling:** Modern CSS (CSS Variables, Grid, Flexbox, Media Queries)
+* **Icons:** Lucide React
 
 ---
 
-## 🚀 Getting Started (Hızlı Başlangıç)
+## 🏛️ Key Architecture Decisions
 
-Bu projeyi yerel makinenizde çalıştırmak için:
-
-1.  **Depoyu klonlayın (veya indirin):**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/pomodoro-aura.git](https://github.com/YOUR_USERNAME/pomodoro-aura.git)
-    ```
-
-2.  **Proje klasörüne gidin:**
-    ```bash
-    cd pomodoro-aura
-    ```
-
-3.  **Gerekli paketleri kurun:**
-    ```bash
-    npm install
-    ```
-
-4.  **Geliştirme sunucusunu başlatın:**
-    Bu komut, projeyi `http://localhost:5173/` adresinde çalıştıracaktır.
-    ```bash
-    npm run dev
-    ```
-
-### 
-### Üretim (Production) Paketi Oluşturma
-
-Sitenizi Vercel, Netlify veya başka bir hosting sağlayıcısında yayınlamak için "üretim" paketini oluşturun:
-
-```bash
-npm run build
-```
-Bu komut, sitenizin yayınlanmaya hazır tüm statik dosyalarını içeren bir **`dist`** klasörü oluşturacaktır.
+* **Modal-Based UI:** Instead of using a router (`react-router-dom`), the application uses a modal-based architecture. This was a key decision to **prevent the timer from resetting** when the user opens the Settings or Statistics panels, ensuring an uninterrupted flow.
+* **Custom `useLocalStorage` Hook:** All persistent state (user settings, theme, timer status) is managed by a single, reusable custom hook (`useLocalStorage.ts`). This hook automatically serializes state to `localStorage` on change and deserializes it on load.
+* **Real-Time Accuracy:** The timer logic relies on "epoch math" (comparing `Date.now()` timestamps) rather than `setInterval` ticks alone. This ensures the timer remains perfectly accurate even if the browser tab is backgrounded or throttled.
 
 ---
 
-## 🏛️ Architecture (Mimari)
+## 🔑 License
 
-Bu proje, "Modal" tabanlı bir Tek Sayfalı Uygulama (SPA) olarak yapılandırılmıştır. Yönlendirme (`react-router-dom`) yerine, tüm çekirdek işlevler (`SettingsModal`, `StatsModal`) ana `App` bileşeni üzerinden koşullu olarak render edilir.
-
-* **`App.tsx`**: Ana bileşen. Tüm state (durum) mantığını, `useEffect` kancalarını, zamanlayıcı çekirdeğini ve yardımcı fonksiyonları içerir.
-* **`useLocalStorage.ts`**: Herhangi bir state'i tarayıcı hafızasına otomatik olarak kaydeden ve oradan okuyan, yeniden kullanılabilir özel bir React kancası.
-* **`SettingsModal.tsx`**: Süreleri, temayı ve bildirim izinlerini yöneten modal bileşeni.
-* **`StatsModal.tsx`**: `localStorage`'dan `sessionHistory`'yi okuyan ve istatistikleri hesaplayan modal bileşeni.
-* **`types.ts`**: Proje genelinde kullanılan paylaşımlı TypeScript tipleri (`Settings`, `Theme` vb.).
-
----
-
-## 🔑 License (Lisans)
-
-Bu proje [MIT Lisansı](https://choosealicense.com/licenses/mit/) altındadır.
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
