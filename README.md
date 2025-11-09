@@ -36,6 +36,20 @@ Use PomodoroAura instantly — no installation required:
 
 ---
 
+## 🛠️ Tech Stack & Key Features
+
+This project was built from scratch using modern web technologies.
+
+* **Framework:** React 18 (with React Hooks)
+* **Language:** TypeScript
+* **Build Tool:** Vite
+* **Styling:** Modern CSS (CSS Variables, Grid, Flexbox, Media Queries)
+* **State Management:** `useLocalStorage` custom hook for all persistent state (settings, timer status, themes, and stats).
+* **Architecture:** A single-page application (SPA) using a modal-based UI to ensure the timer never resets or stops when viewing stats or settings.
+* **Timer Logic:** Relies on "epoch math" (Date.now()) for perfect accuracy, even when the browser tab is in the background.
+
+---
+
 ## 🖼️ Screenshots
 
 | Focus | Short Break | Long Break |
