@@ -23,6 +23,7 @@ Use PomodoroAura instantly — no installation required:
 - 💾 Local saving of user settings  
 - 🔔 Optional notification sounds  
 - 🌙 Light and dark theme options  
+- 📊 Built-in statistics to track productivity  
 
 ---
 
@@ -40,6 +41,10 @@ Use PomodoroAura instantly — no installation required:
 | Focus | Short Break | Long Break |
 |-------|--------------|-------------|
 | ![Focus](./assets/screens/focus.png) | ![Short Break](./assets/screens/short-break.png) | ![Long Break](./assets/screens/long-break.png) |
+
+| Settings | Statistics | Light / Dark Theme |
+|-----------|-------------|--------------------|
+| ![Settings](./assets/screens/settings.png) | ![Statistics](./assets/screens/statistics.png) | ![Themes](./assets/screens/themes.png) |
 
 > Screenshots are stored under `assets/screens/`.
 
