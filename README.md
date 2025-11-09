@@ -1,7 +1,8 @@
 # PomodoroAura
 > Focus, with breathing space.
 
-![PomodoroAura Screenshot](https://i.imgur.com/example.png)
+![PomodoroAura Screenshot]((https://imgur.com/a/BNJ5F9W))
+![PomodoroAura Screenshot](https://imgur.com/a/hIY7cwp)
 *(Remember to replace this with a real screenshot URL from your live app. You can upload one to [imgur.com](https://imgur.com/).)*
 
 ---
