@@ -27,26 +27,26 @@ Use PomodoroAura instantly — no installation required:
 
 ---
 
+## 🛠️ Tech Stack & Key Features
+
+This project was built from scratch using modern web technologies.
+
+* **Framework:** React 18 (with Hooks)  
+* **Language:** TypeScript  
+* **Build Tool:** Vite  
+* **Styling:** CSS Variables, Grid, Flexbox, Media Queries  
+* **State Management:** Custom `useLocalStorage` hook for all persistent state (settings, timer status, theme, and stats)
+* **Architecture:** A single-page application (SPA) using a modal-based UI to ensure the timer never resets or stops when viewing stats or settings.
+* **Timer Logic:** Relies on "epoch math" (Date.now()) for perfect accuracy, even when the browser tab is in the background.
+
+---
+
 ## 🧭 How It Works
 
 1. **Set your timer:** Choose your preferred durations for each phase.  
 2. **Select session count:** Decide how many work sessions should trigger a long break.  
 3. **Start focusing:** PomodoroAura automatically manages transitions between focus and breaks.  
 4. **Stay balanced:** Build a healthy and effective workflow.  
-
----
-
-## 🛠️ Tech Stack & Key Features
-
-This project was built from scratch using modern web technologies.
-
-* **Framework:** React 18 (with React Hooks)
-* **Language:** TypeScript
-* **Build Tool:** Vite
-* **Styling:** Modern CSS (CSS Variables, Grid, Flexbox, Media Queries)
-* **State Management:** `useLocalStorage` custom hook for all persistent state (settings, timer status, themes, and stats).
-* **Architecture:** A single-page application (SPA) using a modal-based UI to ensure the timer never resets or stops when viewing stats or settings.
-* **Timer Logic:** Relies on "epoch math" (Date.now()) for perfect accuracy, even when the browser tab is in the background.
 
 ---
 
