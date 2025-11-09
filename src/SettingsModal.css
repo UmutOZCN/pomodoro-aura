@@ -1,0 +1,172 @@
+/* --- ADIM 1: TEMEL MODAL STİLLERİ --- */
+/* (StatsModal.css ile aynı) */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 150ms ease-out forwards;
+}
+[data-theme="light"] .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-content {
+    background-color: var(--surface-1);
+    border-radius: var(--radius-soft);
+    padding: 1.5rem 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: scale(0.95);
+    animation: popIn 200ms ease-out 100ms forwards;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--surface-2);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.modal-header h2 { font-size: 1.25rem; margin: 0; }
+.modal-header .icon-button { background-color: transparent; }
+
+
+/* --- ADIM 2: AYARLAR FORMU STİLLERİ --- */
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* GÜNCELLEME: İsteğiniz üzerine RESPONSIVE HALE GETİRİLDİ */
+.form-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    /* Varsayılan (Mobil): Tek sütun (Etiket üstte, Input altta) */
+    gap: 0.5rem; 
+}
+
+/* Tablet (500px) ve üzeri ekranlarda */
+@media (min-width: 500px) {
+    .form-group {
+        /* İki sütunlu (yan yana) görünüme geç */
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem; 
+        align-items: center; 
+    }
+}
+
+.form-group legend {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    grid-column: 1 / -1; /* İki sütunluyken başlığın tamamını kapla */
+}
+
+.settings-form label {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.settings-form input[type="number"] {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--surface-2);
+    border-radius: var(--radius-soft);
+    padding: 0.75rem;
+    width: 100%;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.settings-form input[type="number"]:focus-visible {
+    border-color: var(--accent);
+}
+
+.save-button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* --- ADIM 3: TEMA SEÇİCİ STİLLERİ --- */
+
+.form-group.theme-selector {
+    /* Tema seçici HER ZAMAN tek sütunlu olmalı */
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.radio-group {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--surface-2);
+    border-radius: var(--radius-soft);
+    padding: 0.5rem;
+    transition: background-color var(--transition-speed);
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: var(--radius-soft);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
+    color: var(--text-muted);
+    background-color: transparent;
+}
+.radio-group label:has(input:checked) {
+    background-color: var(--surface-1);
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .radio-group label:has(input:checked) {
+     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* --- ADIM 4: BİLDİRİM DÜĞMESİ STİLLERİ --- */
+.form-group.notification-settings {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.notification-settings .preset-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* 'preset-button' stilini (App.css'ten) alır */
+}
+.notification-settings .preset-button:disabled {
+    background-color: var(--surface-2);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.notification-settings .note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-top: -0.5rem;
+}

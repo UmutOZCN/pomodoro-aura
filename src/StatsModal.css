@@ -1,0 +1,97 @@
+/* Bu dosya, hem SettingsModal.css'teki
+  .modal-backdrop, .modal-content, .modal-header
+  stillerini, hem de StatsPage.css'teki
+  .stats-container, .stats-grid, .stat-card
+  stillerini içerir.
+  
+  (SettingsModal.css'ten kopyaladık)
+*/
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 150ms ease-out forwards;
+}
+[data-theme="light"] .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-content {
+    background-color: var(--surface-1);
+    border-radius: var(--radius-soft);
+    padding: 1.5rem 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: scale(0.95);
+    animation: popIn 200ms ease-out 100ms forwards;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--surface-2);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.modal-header h2 { font-size: 1.25rem; margin: 0; }
+.modal-header .icon-button { background-color: transparent; }
+
+
+/* --- İstatistik Stilleri (Eski StatsPage.css'ten) --- */
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+.empty-state {
+    padding: 2rem 1rem; 
+    text-align: center; 
+    color: var(--text-muted);
+    border: 2px dashed var(--surface-2); 
+    border-radius: var(--radius-soft);
+}
+/* GÜNCELLEME: "Mobile First" (Önce Mobil) yaklaşımı */
+.stats-grid { 
+    display: grid; 
+    /* Mobilde varsayılan: Tek sütun (kartlar alt alta) */
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+}
+
+/* Tablet (500px) ve üzeri ekranlarda */
+@media (min-width: 500px) {
+    .stats-grid {
+        /* İki sütunlu (yan yana) görünüme geç */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.stat-card {
+    background-color: var(--surface-2); 
+    border-radius: var(--radius-soft);
+    padding: 1.5rem; 
+    text-align: center;
+}
+.stat-card h3 {
+    font-size: 1rem; 
+    color: var(--text-muted); 
+    margin-bottom: 0.5rem;
+}
+.stat-card .stat-value {
+    font-family: var(--font-heading); 
+    font-size: 2.5rem;
+    font-weight: 600; 
+    color: var(--accent); 
+    display: block;
+}
