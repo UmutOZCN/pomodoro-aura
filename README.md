@@ -56,3 +56,7 @@ or visit the official website:
 👉 **[https://pomodoroaura.vercel.app/](https://pomodoroaura.vercel.app/)**  
 
 Developed by [@UmutOZCN](https://github.com/UmutOZCN)
+
+## 🔑 License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
