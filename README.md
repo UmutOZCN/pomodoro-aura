@@ -7,13 +7,23 @@
 
 ---
 
-## 🚀 Live Application
+## 🌐 Live Application
 
 This application is fully deployed and available for you to use right now.
 
 **Visit the live site:**
-### [https://pomodoro-aura.vercel.app](https://pomodoro-aura.vercel.app)
-*(Replace this with your actual Vercel link)*
+### [https://pomodoroaura.vercel.app/](https://pomodoroaura.vercel.app/)
+
+---
+##🌟 Features
+
+*⏳ Fully customizable durations for work, short break, and long break
+*🔁 Adjustable session count — choose how many Pomodoros trigger a long break
+*🧠 Automatic transitions between focus and break periods
+*🛠️ Pause, Resume, and Reset controls
+*💾 Persistent settings stored locally in the browser
+*🔔 Optional sound & desktop notifications
+*🌙 Light / Dark theme
 
 ---
 
